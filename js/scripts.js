@@ -15,7 +15,7 @@ var volume = 0.75;
 // var next_button = document.getElementById('nextBtn');
 
 
-const playlist = ["femtanyl - KATAMARI.mp3", "femtanyl - GIRL HELL 1999.mp3", "femtanyl - PUSH UR T3MPRR.mp3"]
+const playlist = ["songs/femtanyl - KATAMARI.mp3", "songs/femtanyl - GIRL HELL 1999.mp3", "songs/femtanyl - PUSH UR T3MPRR.mp3"]
 let currentSongIndex = 0;
 var player = document.getElementById("player");
 player.src = playlist[currentSongIndex];
@@ -40,6 +40,10 @@ player.onloadedmetadata = function() {
     progress_bar.progressbar("option", { 'max' : duration });
 };
 
+function getFileName(path) {
+    return path.split('/').pop();
+}
+
 more_info.click(function() {
     currentSongIndex = (currentSongIndex < playlist.length - 1) ? currentSongIndex + 1 : 0;
     player.src = playlist[currentSongIndex];
@@ -50,7 +54,7 @@ more_info.click(function() {
 });
 
 function updateSongTitle(title) {
-    $('#song-title').text('♪ ' + title + ' ♪');
+    $('#song-title').text('♪ ' + getFileName(title) + ' ♪');
 }
 
 function getTime(t) {
