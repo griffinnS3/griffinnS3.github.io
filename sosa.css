@@ -1,0 +1,96 @@
+.image-View {
+    display: flex;
+    flex-direction: column;  
+    align-items: flex-start; 
+    gap: 30px;
+    padding: 40px;
+}
+
+.top_left img {
+    width: 400px;
+    height: 400px;
+    margin-left: 100px;      
+    transform: rotate(-2deg); 
+}
+
+.second_img img {
+    width: 250px;
+    height: 350px;
+    margin-left: 500px;     
+    transform: rotate(2deg);
+}
+
+.thrd_img img {
+    width: 400px;
+    height: 400px;
+    transform: rotate(4deg);
+    margin-left: 250px;
+}
+
+.fourth_img img {
+    width: 400px;
+    height: 500px;
+    margin-left: 450px;
+    transform: rotate(3deg);
+}
+
+img {
+    border: 5px groove rgb(127, 255, 0);
+    display: block;
+}
+.solo-one {
+    margin-left: 450px;
+    transform: rotate(-2deg);
+}
+
+.solo-two {
+    margin-left: 450px;
+    transform: rotate(2deg);
+}
+.img-row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-end; /* makes them sit at different heights if sizes differ */
+}
+.img-row .img-wrap:nth-child(1) img {
+    width: 250px;
+    height: 350px;
+    transform: rotate(-1deg);
+    margin-left: 150px
+}
+
+.img-row .img-wrap:nth-child(2) img {
+    width: 300px;
+    height: 250px;
+    transform: rotate(2deg);
+    margin-top: 40px; /* drops it lower than its neighbor */
+    margin-left: 100px
+}
+.sidebar-icon { 
+    border: none;
+    display: inline;
+}
+@keyframes bob {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+.bottom-sosa {
+    border: none;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    animation: bob 1.5s ease-in-out infinite;
+    padding-right: 50px;
+}
+.speech-bubble{
+    border: none;
+    position: fixed; 
+    bottom: 0;
+    right: 0;
+    margin-right: 130px;
+    margin-bottom: 130px;
+    animation: bob 1.5s ease-in-out infinite;
+}

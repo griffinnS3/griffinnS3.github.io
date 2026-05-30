@@ -1,0 +1,8 @@
+.entry {
+    border-color: rgb(127, 255, 0);
+     border-style: groove; 
+     border-width: thick;
+     padding-top: 50px;
+     text-align: center;
+     padding-bottom: 50px;
+}
