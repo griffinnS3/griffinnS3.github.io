@@ -63,7 +63,7 @@ function getTime(t) {
 }
 
 function getProgressBarClickInfo(progress_bar, e) {
-    var offset = progress_bar.position();
+    var offset = progress_bar.offset();
     var x = e.pageX - offset.left; // or e.offsetX (less support, though)
     var y = e.pageY - offset.top;  // or e.offsetY
     var max = progress_bar.progressbar("option", "max");
@@ -80,6 +80,7 @@ volume_bar.click(function(e) {
     var info = getProgressBarClickInfo($(this), e);
     volume_bar.progressbar('value', info.value);
     player.volume = info.value / info.max;
+    player.volume = Math.min(info.value / 100, 1.0); 
 });
 
 progress_bar.progressbar({
@@ -89,6 +90,7 @@ progress_bar.progressbar({
 progress_bar.click(function(e) {
     var info = getProgressBarClickInfo($(this), e);
     player.currentTime = player.duration / info.max * info.value;
+     progress_bar.progressbar('value', info.value); 
 });
 
 play_button.click(function() {
