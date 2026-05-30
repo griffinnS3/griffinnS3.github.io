@@ -41,7 +41,7 @@ player.onloadedmetadata = function() {
 };
 
 function getFileName(path) {
-    return path.split('/').pop();
+    return path.split('/').pop().replace(/\.[^.]+$/, '');
 }
 
 more_info.click(function() {
