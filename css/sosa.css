@@ -94,3 +94,32 @@ img {
     margin-bottom: 130px;
     animation: bob 1.5s ease-in-out infinite;
 }
+.page-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+#sidebar {
+    width: 150px;
+    flex-shrink: 0;  
+}
+
+.content-View {
+    flex: 1;           
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+
+.image-View {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 40px;
+}
+header h2 {
+    display: flex;
+    align-items: center;  
+    gap: 10px;            
+}
