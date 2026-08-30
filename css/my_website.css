@@ -8,7 +8,6 @@
 html, body {
     height: 100%;
     width: 100%;
-    background-color: black;
     font-family: "VT323";
 }
 .Content-View{
@@ -143,7 +142,6 @@ color: #EB0CD3
     gap: 10px;
     z-index: 1000;
     padding: 10px;
-    background-color: black;
     border-right: 2px solid rgb(127, 255, 0);
     border-top: 2px solid rgb(127, 255, 0);
     border-bottom: 2px solid rgb(127, 255, 0);
