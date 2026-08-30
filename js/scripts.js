@@ -113,5 +113,3 @@ mute_button.click(function() {
     $(this).toggleClass("fa-volume-up", player.volume != 0);
     $(this).toggleClass("fa-volume-off", player.volume == 0);
 });
-
-

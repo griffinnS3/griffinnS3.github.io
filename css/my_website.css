@@ -11,7 +11,8 @@ html, body {
     background-color: black;
     font-family: "VT323";
 }
-.Content-View{background-color: black; 
+.Content-View{
+   
     text-align: center; 
     color: rgb(127, 255, 0); 
     border-style:groove; 
@@ -219,4 +220,40 @@ color: #EB0CD3
     min-width: 200px;
     font-size: 20px;
     line-height: 1.4;
+}
+#intro-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: #000;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 1s ease;
+    }
+
+    #intro-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    #intro-overlay.fade-out {
+            opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Hidden by default via inline class set before paint */
+    .intro-skip #intro-overlay {
+      display: none !important;
+    }
+    #bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* sits behind everything */
 }
