@@ -246,6 +246,16 @@ color: #EB0CD3
     .intro-skip #intro-overlay {
       display: none !important;
     }
+    .enter-btn {
+      transform: translateX(-50%);
+      padding: 10px 20px;
+      background-color: rgb(127, 255, 0);
+      color: black;
+      border: none;
+      cursor: pointer;
+      font-family: "VT323";
+      font-size: 18px;
+    }
     #bg-video {
   position: fixed;
   top: 0;
